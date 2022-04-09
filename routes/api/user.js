@@ -5,9 +5,11 @@ const router = express.Router();
 const bcrypt=require('bcryptjs');
 const jwt=require('jsonwebtoken');
 const config=require('config')
-const {check, validationResult } = require('express-validator/check');
+// const {check, validationResult } = require('express-validator/check');
 const gravatar = require('gravatar/lib/gravatar');
 const User=require('../../models/User');
+process.env.SUPPRESS_NO_CONFIG_WARNING = 'y';
+const { check, validationResult } = require("express-validator")
 
 /** 
  @api {post} /auth Get user information for the authentication of the user

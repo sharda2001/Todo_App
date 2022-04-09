@@ -12,9 +12,9 @@ app.use(express.json({extended:false}))
 
 app.get('/', (req, res) => res.send('API is running'));
 
-app.use('/todos/user',require('./routes/todos/user'));
-app.use('/todos/auths',require('./routes/todos/auths'));
-app.use('/todos/todo',require('./routes/todos/todo'));
+app.use('/todos/user',require('./routes/api/user'));
+app.use('/todos/auths',require('./routes/api/auths'));
+app.use('/api/v1',require('./routes/api/todo'));
 
 
 
